@@ -1,16 +1,13 @@
 package JSONParser;
 
-import.java.io.HTTPpost;
-import.java.io.urlcon;
+import JSONParser.HTTPpost;
+import JSONParser.UrlCon;
+import java.io.IOException;
 
-public static void main(String[] args) { 
-} 
-
-public class applicationmainmethod throws Exception {
-	Urlcon = new urlcon();
-	String initalconnection = urlcon.sendGetRequest
+//public class applicationmainmethod throws Exception {
+	//Urlcon = new urlcon();
+	//String initalconnection = urlcon.sendGetRequest
 	
-}
 
 //{"id":"s195390","tasks":
 //["/task/6127","

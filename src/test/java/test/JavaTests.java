@@ -2,9 +2,9 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
-import JSONParser.HTTPPost;
+import JSONParser.HTTPpost;
 import JSONParser.JSONparser;
+import java.io.IOException;
 
 class JavaTests {
 
@@ -14,5 +14,4 @@ class JavaTests {
 		obj.sendPost();
 		fail("Not yet implemented");
 	}
-
 }

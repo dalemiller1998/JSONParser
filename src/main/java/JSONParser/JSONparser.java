@@ -10,25 +10,29 @@ import javax.swing.text.html.HTMLEditorKit.Parser;
 
 public class JSONparser {
 	
-	private static final Object Currentvalue = null;
+	private Reader reader;
+		
+	public JSONparser(Reader reader) {
+		this.reader = reader;
+	}
 
 	public void json(char c) {
 		element(c);
 	}
 	
 	public void value(char c) {
-		if (c == '"') toString(c);
+		if (c == '"') readString(c);
 		readObject();
-		readArray();
+		readArray1();
 		readObject();
-		toString();
-		number();
-		"true";
-		"false";
-		"null";
+		readString();
+		readNumber();
+		readTrue();
+		readFalse();
+		readNull();
 	}
 	
-	private void readArray() {
+	public void readArray1() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -38,34 +42,41 @@ public class JSONparser {
 	public Object readObject() {
 		return null;
 	}
-	
-	public Object readArray() {
+		
+	public Class<Character> readString(char CurrentValue) {
 		return null;
 	}
-	
-	public Class<Character> readString(char CurrentValue) {
-		return null; 
-				
-	public char Currentvalue = 'x';
-		StringBuilder theTextString = new StringBuilder();
-		theTextString.append(Currentvalue);
-		readObject();
-	}
-	
-	public void number() {
+					
+	public void readString() {
 		
 	}
 	
+	public void readNumber() {
+		
+	}
+	
+	public void readTrue() {
+		
+	}
+	
+	public void readFalse() {
+		
+	}
+
+	public void readNull() {
+	
+}
+	
 	public void element(char c) {
 		//TODO
-	}()
-	
+	};
 	
 	public void continueNext() {
 		try {
-			Currentvalue = (char) reader.read();
-		} catch (IOException ex)
-		Logger.getLogger(Parser.class.getName())
+			char c = (char) reader.read();
+			//TODO what do we do with this character?
+		} catch (IOException ex) {
+			System.err.println("Error: " + ex.getMessage());
 		}
 	}
 	
@@ -75,7 +86,12 @@ public class JSONparser {
 			readObject();
 		return null;}
 	}*/
-//	json
+	
+	
+	
+	
+//Syntax
+//json
 //    element
 //
 //value
